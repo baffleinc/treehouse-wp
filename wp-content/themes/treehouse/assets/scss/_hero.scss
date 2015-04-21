@@ -1,0 +1,27 @@
+section.hero{
+	height: 100vh;
+	background-size: cover;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.content{
+		text-align: center;
+	}
+
+	ul.social{
+		position: absolute;
+		bottom: rem-calc(20);
+		left: rem-calc(20);
+		margin-bottom: 0;
+	}
+
+	svg{
+		display: block;
+		margin-bottom: rem-calc(28);
+
+		width: rem-calc(400);
+	}
+}

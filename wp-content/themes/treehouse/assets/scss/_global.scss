@@ -1,0 +1,125 @@
+body.admin-bar header{ top: rem-calc(28) }
+
+/**
+*
+* Header styles
+*
+**/
+
+$header-height: 70;
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0; right: 0;
+	z-index: 99;
+
+	height: rem-calc($header-height);
+	background-color: $white;
+
+	.logo{
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		margin-top: rem-calc( ($header-height - 32) / 2);
+		margin-left: 2rem;
+
+		text-indent: 100%;
+		overflow-x: hidden;
+		white-space: nowrap;
+
+		background-image: url(../images/treehouse.svg);
+	}
+
+	.toggle-menu{
+		display: block;
+		width: rem-calc($header-height);
+		height: rem-calc($header-height);
+		line-height: rem-calc($header-height);
+		text-align: center;
+
+		color: $jumbo;
+
+		font-size: rem-calc(24);
+
+		transition: all .3s $easeOutExpo;
+		transform: rotate(0);
+		
+		&.rotate{ transform: rotate(90deg) }
+	}
+
+	ul{
+		transition: all .3s $easeOutExpo;
+		transform: translateY(rem-calc(-$header-height));
+
+		&.visible{ transform: translateY(0) }
+		li{
+			a{
+				display: block;
+				line-height: rem-calc($header-height);
+				font-size: rem-calc(18);
+				color: $jumbo;
+			}
+		}
+	}
+}
+
+/**
+*
+* Footer Styles
+*
+**/
+
+
+footer{
+	background-color: $primary-color;
+	line-height: rem-calc(70);
+	color: $white;
+	font-family: $font-family-serif;
+
+	ul.social{
+		margin-top: rem-calc(19);
+	}
+}
+
+/**
+*
+* Global Button Styles
+*
+**/
+
+
+.button.ghost,
+button.ghost{
+	font-family: $font-family-serif;
+	border: 2px solid $white;
+	color: $white;
+
+	background-color: rgba(0,0,0,0);
+
+	&.dark{
+		border: 2px solid $jumbo;
+		color: $jumbo;
+	}
+}
+
+
+/**
+*
+* Social Icons
+*
+**/
+
+ul.social{
+	a{
+		color: $white;
+		border: 1px solid $white;
+		border-radius: $global-rounded;
+		
+		display: inline-block;
+		height: 2rem;
+		width: 2rem;
+		line-height: 2rem;
+		text-align: center;
+	}
+}
