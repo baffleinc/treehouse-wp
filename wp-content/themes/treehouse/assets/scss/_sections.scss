@@ -21,6 +21,7 @@ section#work{
 
 	.thumbs{
 		.item{
+			margin-bottom: 1rem;
 			> div { 
 				position: relative;
 				height: 100%;
@@ -109,3 +110,7 @@ section.columns-3{
 		font-family: $font-family-serif;
 	}
 }
+
+.angular-google-map-container { 
+    height: rem-calc(400); 
+  }

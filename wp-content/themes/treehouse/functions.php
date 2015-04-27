@@ -13,10 +13,17 @@
 
 
 		wp_register_style( 'style', get_template_directory_uri().'/assets/css/app.css', array(), time() );
+		wp_register_style( 'fancybox', get_template_directory_uri().'/assets/css/lib/fancybox.css', array(), time() );
 		wp_enqueue_style( 'style' );
-
+		wp_enqueue_style( 'fancybox' );
+		
+		wp_dequeue_script( 'jquery' );
+		wp_enqueue_script( 'jQuery', get_template_directory_uri().'/assets/js/jquery-2.1.3.js', array(), time(), false );
 		wp_enqueue_script( 'vendor.js', get_template_directory_uri().'/assets/js/angular.bower.js', array(), time(), true );
+		wp_enqueue_script( 'grid.js', get_template_directory_uri().'/assets/js/fancybox.js', array('jQuery'), time(), true );
+		wp_enqueue_script( 'isotope.js', get_template_directory_uri().'/assets/js/isotope.js', array(), time(), true );
 		wp_enqueue_script( 'app.js', get_template_directory_uri().'/assets/js/app.js', array('vendor.js'), time(), true );
+		// wp_enqueue_script( 'preview-grid', get_template_directory_uri().'/assets/js/preview-grid.js', array('app.js'), time(), true );
 
 		
 	}
@@ -58,6 +65,56 @@
 	 add_image_size( 'hero-image', 1440 );
 
 
+	 /**
+	 * Create a taxonomy
+	 *
+	 * @uses  Inserts new taxonomy object into the list
+	 * @uses  Adds query vars
+	 *
+	 * @param string  Name of taxonomy object
+	 * @param array|string  Name of the object type for the taxonomy object.
+	 * @param array|string  Taxonomy arguments
+	 * @return null|WP_Error WP_Error if errors, otherwise null.
+	 */
+	function portfolio_category() {
+	
+		$labels = array(
+			'name'					=> _x( 'Portfolio Categories', 'Taxonomy plural name', 'th' ),
+			'singular_name'			=> _x( 'Portfolio Category', 'Taxonomy singular name', 'th' ),
+			'search_items'			=> __( 'Search Portfolio Categories', 'th' ),
+			'popular_items'			=> __( 'Popular Portfolio Categories', 'th' ),
+			'all_items'				=> __( 'All Portfolio Categories', 'th' ),
+			'parent_item'			=> __( 'Parent Portfolio Category', 'th' ),
+			'parent_item_colon'		=> __( 'Parent Portfolio Category', 'th' ),
+			'edit_item'				=> __( 'Edit Portfolio Category', 'th' ),
+			'update_item'			=> __( 'Update Portfolio Category', 'th' ),
+			'add_new_item'			=> __( 'Add New Portfolio Category', 'th' ),
+			'new_item_name'			=> __( 'New Portfolio Category Name', 'th' ),
+			'add_or_remove_items'	=> __( 'Add or remove Portfolio Categories', 'th' ),
+			'choose_from_most_used'	=> __( 'Choose from most used th', 'th' ),
+			'menu_name'				=> __( 'Portfolio Category', 'th' ),
+		);
+	
+		$args = array(
+			'labels'            => $labels,
+			'public'            => true,
+			'show_in_nav_menus' => true,
+			'show_admin_column' => false,
+			'hierarchical'      => true,
+			'show_tagcloud'     => true,
+			'show_ui'           => true,
+			'query_var'         => true,
+			'rewrite'           => true,
+			'query_var'         => true,
+			'capabilities'      => array(),
+		);
+	
+		register_taxonomy( 'portfolio-category', array( 'portfolio-item' ), $args );
+	}
+	
+	add_action( 'init', 'portfolio_category' );
+
+
 	/**
 	* Registers a new post type
 	* @uses $wp_post_types Inserts new post type object into the list
@@ -87,7 +144,7 @@
 			'labels'                   => $labels,
 			'hierarchical'        => false,
 			'description'         => 'description',
-			'taxonomies'          => array(),
+			'taxonomies'          => array('portfolio_category'),
 			'public'              => true,
 			'show_ui'             => true,
 			'show_in_menu'        => true,
@@ -111,3 +168,6 @@
 	}
 	
 	add_action( 'init', 'th_register_portfolio_item' );
+
+
+	

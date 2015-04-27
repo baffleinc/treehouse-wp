@@ -1,0 +1,95 @@
+@media #{$medium-up}{
+	body.page-template-tmpl-about{
+		overflow: hidden;
+		width: 100%;
+
+		.about{
+			width: 200%;
+		}
+
+		.about-container,
+		.contact-container{
+			width: 100%;
+			position: relative;
+		}
+
+		.about-container button,
+		.contact-container button{
+			position: absolute;
+			top: 50%;
+			margin-top: rem-calc(-22);
+		}
+
+		.about-container button{ right: 0; }
+		.contact-container button { left: 0; }
+		
+		#gform_wrapper_1{
+			margin: 0;
+		}
+
+		#gform_fields_1{
+			@include grid-row();
+
+			.gform_wrapper ul li.gfield{
+				clear: none;
+			}
+		}
+	}
+	
+}
+
+body.page-template-tmpl-about{
+	background: url(../images/about-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+.about{
+	height: 100%;
+
+	transition: all 500ms $easeOutExpo;
+
+	&.contact{
+		transform: translateX(-50%);
+	}
+	
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media #{$medium-up}{
+		width: 200%;
+	}
+
+	.serif *{
+		font-family: $font-family-serif;
+		color: $jumbo;
+		font-size: 1rem;
+	}
+
+	.contact{
+		li{
+			font-size: rem-calc(32);
+
+			a:hover{
+				color: $primary-color;
+			}
+		}
+
+		*{ color: $jumbo; }
+	}
+
+	h2.page-title{
+		color: $jumbo;
+		font-size: rem-calc(52);
+	}
+}
+
+@media #{$medium-up}{
+	body.page-template-tmpl-about{
+		footer{
+			margin-top: rem-calc(-100);
+			margin-bottom: 0;
+		}
+	}
+}

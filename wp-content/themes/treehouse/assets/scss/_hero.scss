@@ -1,6 +1,7 @@
 section.hero{
 	height: 100vh;
 	background-size: cover;
+	background-position: center top;
 	position: relative;
 
 	display: flex;
@@ -22,6 +23,7 @@ section.hero{
 		display: block;
 		margin-bottom: rem-calc(28);
 
-		width: rem-calc(400);
+		@media #{$small-only}{ width: rem-calc(280) }
+		@media #{$medium-up}{ width: rem-calc(400) }
 	}
 }

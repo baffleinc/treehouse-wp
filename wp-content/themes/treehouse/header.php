@@ -41,9 +41,9 @@
 				<h1 class="left"><a href="<?php echo home_url() ?>" title="<?php bloginfo('name'); ?>" class="logo"><?php bloginfo('name'); ?></a></h1>
 				<a ng-click="showMenu = !showMenu" ng-class="{ rotate : showMenu }" class="right toggle-menu"><i class="fa fa-bars"></i></a>
 				<ul class="inline-list right" ng-class="{ visible : showMenu }">
-					<li><a href="#work">Work</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="<?php echo home_url('/#work') ?>">Work</a></li>
+					<li><a ng-click="showAbout(false)">About</a></li>
+					<li><a ng-click="showAbout(true)">Contact</a></li>
 				</ul>
 			<!-- </div>
 		</div> -->

@@ -149,7 +149,11 @@ module.exports = function(grunt) {
 				dest: '<%= app %>/js/angular.bower.js',
 				cssDest: '<%= app %>/css/vendor.css',
 				include: [
-					'angular'
+					'lodash',
+					'angular',
+					'angular-animate',
+					'angular-scroll',
+					'angular-google-maps'
 				]
 			}
 		}
