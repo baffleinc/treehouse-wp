@@ -4,7 +4,7 @@
 
 	<div class="content">
 		<?php get_template_part('modules/module', 'logo') ?>
-		<a href="#showreel" class="button ghost">Showreel</a>
+		<a href="<?php the_field('showreel_url', 'option') ?>" class="fancybox video button ghost">Showreel</a>
 	</div>
 
 	<?php get_template_part( 'modules/module', 'social' ) ?>

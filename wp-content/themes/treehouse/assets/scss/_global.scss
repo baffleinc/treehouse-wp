@@ -96,14 +96,20 @@ footer{
 .button.ghost,
 button.ghost{
 	font-family: $font-family-serif;
-	border: 2px solid $white;
+	border: 1px solid $white;
 	color: $white;
+
+	transition: all .3s $easeOutExpo;
 
 	background-color: rgba(0,0,0,0);
 
 	&.dark{
-		border: 2px solid $jumbo;
+		border: 1px solid $jumbo;
 		color: $jumbo;
+	}
+
+	&:hover{
+		transform: scale(1.1);
 	}
 }
 

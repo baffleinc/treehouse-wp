@@ -6,6 +6,12 @@
 	*/
 -->
 
+<?php 
+
+	$cats = get_terms(array('portfolio-category'), array('exclude' => array(4, 3)));
+
+?>
+
 <section id="work">
 	<div class="select-type iso-filters">
 		<button class="large" data-filter=".video">Moving</button>
@@ -14,10 +20,10 @@
 	<div class="row">
 		<div class="small-12 columns">
 			<ul class="no-bullet categories iso-filters">
-				<li><button class="dark ghost" data-filter="*">All</button></li>
-				<li><button class="dark ghost" data-filter=".commercial">Commercial</button></li>
-				<li><button class="dark ghost" data-filter=".fashion">Fashion</button></li>
-				<li><button class="dark ghost" data-filter=".music">Music</button></li>
+				<li><button class="small dark ghost" data-filter="*">All</button></li>
+				<?php foreach($cats as $c) : ?>
+				<li><button class="small dark ghost" data-filter=".<?php echo $c->slug ?>"><?php echo $c->name ?></button></li>
+				<?php endforeach ?>
 			</ul>
 		</div>
 	</div>
@@ -32,7 +38,7 @@
 			</div>
 				
 		</div> -->
-		<?php $projects = get_posts(array('post_type' => 'portfolio-item')); ?>
+		<?php $projects = get_posts(array('post_type' => 'portfolio-item', 'showposts' => 999)); ?>
 
 		<ul id="og-grid" class="og-grid">
 		<?php 
@@ -45,7 +51,11 @@
 			if(!empty($images['images'])) $first_image = $images['images'][0]['gallery_image']['sizes']['hero-image'];
 		?>
 			<li class="iso-item <?php echo $class_string ?>">
-				<a class="fancybox" href="<?php echo $first_image ?>" data-title="<?php echo $project->post_content ?>" rel="fancy-<?php echo $project->ID ?>" title="<?php the_field('description', $project->ID) ?>">
+				<?php if(get_field('video', $project->ID)) : ?>
+					<a class="fancybox video" href="<?php the_field('video', $project->ID) ?>" data-title="<?php echo $project->post_content ?>" rel="fancy-<?php echo $project->ID ?>" title="<?php the_field('description', $project->ID) ?>">
+				<?php else : ?>
+					<a class="fancybox gallery" href="<?php echo $first_image ?>" data-title="<?php echo $project->post_content ?>" rel="fancy-<?php echo $project->ID ?>" title="<?php the_field('description', $project->ID) ?>">
+				<?php endif; ?>
 					<img src="<?php the_field('thumbnail', $project->ID) ?>" alt="<?php echo $project->post_title ?>"/>
 					<span class="info">
 						<h4><?php the_field('title', $project->ID) ?></h4>

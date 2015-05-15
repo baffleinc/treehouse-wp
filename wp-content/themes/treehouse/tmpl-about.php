@@ -18,51 +18,9 @@ get_header();
 			<div class="small-12 medium-6 medium-push-6 columns serif">
 				<p>We make a whole bunch of shit, talk to us we’ll tell youwhat you want to hear but won’t deliver. eata dick. All I want is your money</p>
 
-				<div class="row">
-					<div class="small-12 columns">
-						<p><strong>Our clients include</strong></p>
-					</div>
-					<div class="small-6 medium-3 columns">
-						<ul class="no-bullet">
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-						</ul>
-					</div>
-					<div class="small-6 medium-3 columns">
-						<ul class="no-bullet">
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-						</ul>
-					</div>
-					<div class="small-6 medium-3 columns">
-						<ul class="no-bullet">
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-						</ul>
-					</div>
-					<div class="small-6 medium-3 columns">
-						<ul class="no-bullet">
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-							<li>Nike</li>
-							<li>Pooman</li>
-							<li>Weeman</li>
-						</ul>
-					</div>
-				</div>
+				<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
+					<?php the_content() ?>
+				<?php endwhile; endif; ?>
 			</div>
 			<div class="small-12 medium-6 medium-pull-6 columns contact">
 				<ul class="no-bullet">

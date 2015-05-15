@@ -1,5 +1,11 @@
 'use strict';
 
+// Apologies to future developers... The original design was a
+// perfect candidate for angular, so I wrote a bunch of the 
+// functionality in angular. Nick then changed his mind and
+// supplied his own design, so I ported over bits and pieces
+// to save time. Shame, the other one was fully hectic!
+
 angular.module('thApp', ['uiGmapgoogle-maps'])
 	.controller('MainController', function ($scope, $http, $location){
 
@@ -57,7 +63,7 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 
 	});
 
-
+// jQuery dependant stuff
 
 $(function() {
 	// Grid.init();
@@ -76,11 +82,13 @@ $(function() {
 
 	// filter items on button click
 	$('.iso-filters').on( 'click', 'button', function() {
+	  $('.iso-filters .active').removeClass('active');
+	  $(this).addClass('active');
 	  var filterValue = $(this).attr('data-filter');
 	  $container.isotope({ filter: filterValue });
 	});
 
-	$(".fancybox").fancybox({
+	$(".fancybox.gallery").fancybox({
 		openEffect	: 'elastic',
 		closeEffect	: 'elastic',
 		helpers: {
@@ -88,5 +96,25 @@ $(function() {
 		      locked: false
 		    }
 		  }
+	});
+
+	$(".fancybox.video").fancybox({
+		openEffect	: 'elastic',
+		closeEffect	: 'elastic',
+		helpers: {
+		    overlay: {
+		      locked: false
+		    },
+		    media: {}
+		},
+		fitToView: true
+	});
+
+	$('.client-list').slick({
+	  infinite: true,
+	  slidesToShow: 4,
+	  slidesToScroll: 4,
+	  autoplay: true,
+	  autoplaySpeed: 2000,
 	});
 });

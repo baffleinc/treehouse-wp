@@ -16,14 +16,16 @@
 		wp_register_style( 'fancybox', get_template_directory_uri().'/assets/css/lib/fancybox.css', array(), time() );
 		wp_enqueue_style( 'style' );
 		wp_enqueue_style( 'fancybox' );
-		
+
 		wp_dequeue_script( 'jquery' );
+		
 		wp_enqueue_script( 'jQuery', get_template_directory_uri().'/assets/js/jquery-2.1.3.js', array(), time(), false );
 		wp_enqueue_script( 'vendor.js', get_template_directory_uri().'/assets/js/angular.bower.js', array(), time(), true );
-		wp_enqueue_script( 'grid.js', get_template_directory_uri().'/assets/js/fancybox.js', array('jQuery'), time(), true );
+		wp_enqueue_script( 'fancybox.js', get_template_directory_uri().'/assets/js/fancybox.js', array('jQuery'), time(), true );
+		wp_enqueue_script( 'fancybox.media.js', get_template_directory_uri().'/assets/js/fancybox.media.js', array('jQuery'), time(), true );
 		wp_enqueue_script( 'isotope.js', get_template_directory_uri().'/assets/js/isotope.js', array(), time(), true );
+		wp_enqueue_script( 'slick.js', '//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js', array(), time(), true );
 		wp_enqueue_script( 'app.js', get_template_directory_uri().'/assets/js/app.js', array('vendor.js'), time(), true );
-		// wp_enqueue_script( 'preview-grid', get_template_directory_uri().'/assets/js/preview-grid.js', array('app.js'), time(), true );
 
 		
 	}

@@ -1,11 +1,21 @@
 section#work{
 
+	.row{ max-width: rem-calc(1440); }
+
+	.iso-filters button.active{
+	  background-color: $primary-color;
+	  color: $white;
+	  border-color: transparent;
+	}
+
 	padding: 0 0 4rem;
 
 	.select-type button{
 		width: 50%;
 		display: inline-block;
 		float: left;
+
+		&.active{ background-color: $dark-blue }
 	}
 
 	.categories{
@@ -108,6 +118,38 @@ section.columns-3{
 
 	p{
 		font-family: $font-family-serif;
+	}
+}
+
+section.clients{
+	.client-list{
+		max-width: rem-calc(800);
+		margin: 0 auto;
+
+		img{ padding: rem-calc(20); }
+		button{ display: none!important; }
+	}
+}
+
+section.insta{
+	
+	padding: 4rem 0;
+
+	.sbi_follow_btn,
+	.sb_instagram_header{ display: none!important; }
+
+	h2{
+		text-align: center;
+		font-size: rem-calc(48);
+	}
+
+	#sbi_images{
+		overflow-x: scroll;
+		white-space: nowrap;
+
+		-webkit-overflow-scrolling: touch;
+
+		.sbi_item{ width: rem-calc(300)!important; }
 	}
 }
 
