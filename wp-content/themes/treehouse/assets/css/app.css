@@ -3028,11 +3028,42 @@ th.hide-for-touch {
 body.admin-bar header {
   top: 1.75rem; }
 
+@media only screen and (max-width: 40em) {
+  #wpadminbar {
+    top: -46px; } }
+
 /**
 *
 * Header styles
 *
 **/
+.headroom {
+  transition: transform 350ms cubic-bezier(0.19, 1, 0.22, 1); }
+
+.headroom--pinned {
+  transform: translateY(0); }
+
+.headroom--unpinned {
+  transform: translateY(-100px); }
+
+@media only screen and (min-width:64.063em) {
+  video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    display: block !important; } }
+
+video#bgvid {
+  display: none; }
+
 header {
   position: fixed;
   top: 0;
@@ -3083,7 +3114,7 @@ footer {
   background-color: #6BA3B8;
   line-height: 4.375rem;
   color: #FFFFFF;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+  font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
   footer ul.social {
     margin-top: 1.1875rem; }
   footer .locations a {
@@ -3095,7 +3126,7 @@ footer {
 *
 **/
 .button.ghost, button.ghost {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -3127,6 +3158,21 @@ ul.social {
     line-height: 2rem;
     text-align: center; }
 
+h1, h2, h3 {
+  letter-spacing: 2px; }
+
+p {
+  font-weight: 400; }
+
+.headroom {
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1); }
+
+.headroom--pinned {
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  transform: translateY(-100%); }
+
 section.hero {
   height: 100vh;
   background-size: cover;
@@ -3152,6 +3198,9 @@ section.hero {
       section.hero svg {
         width: 25rem; } }
 
+section:not(#hero) {
+  background-color: #FFFFFF; }
+
 section#work {
   padding: 0 0 4rem; }
   section#work .row {
@@ -3163,7 +3212,9 @@ section#work {
   section#work .select-type button {
     width: 50%;
     display: inline-block;
-    float: left; }
+    float: left;
+    font-size: 1.5rem;
+    letter-spacing: 1px; }
     section#work .select-type button.active {
       background-color: #002D5C; }
   section#work .categories {
@@ -3172,7 +3223,7 @@ section#work {
       display: inline-block;
       margin: 1rem; }
       section#work .categories li a.button {
-        font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+        font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
   section#work .thumbs .item {
     margin-bottom: 1rem; }
     section#work .thumbs .item > div {
@@ -3199,7 +3250,7 @@ section#work {
       font-size: 1.75rem;
       color: #777777; }
     section#work .thumbs .item p {
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
       font-size: 0.875rem;
       font-style: italic;
       color: #777777; }
@@ -3207,11 +3258,14 @@ section#work {
 section.text-over-image, section.clients {
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-color: #6BA3B8;
   padding: 4rem 0;
   text-align: center;
   position: relative; }
+  @media only screen and (min-width:64.063em) {
+    section.text-over-image, section.clients {
+      background-position: center -200px; } }
   section.text-over-image:after, section.clients:after {
     content: "";
     display: block;
@@ -3229,12 +3283,25 @@ section.text-over-image, section.clients {
   section.text-over-image h2, section.text-over-image p, section.clients h2, section.clients p {
     color: #FFFFFF; }
   section.text-over-image p, section.clients p {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+    font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
 
 section.columns-3 {
   padding: 4rem 0; }
+  section.columns-3 .columns {
+    opacity: 0;
+    top: 1rem;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    transition-delay: 500ms; }
+    section.columns-3 .columns:nth-of-type(2) {
+      transition-delay: 600ms; }
+    section.columns-3 .columns:nth-of-type(3) {
+      transition-delay: 700ms; }
+    section.columns-3 .columns.show {
+      opacity: 1;
+      top: 0; }
   section.columns-3 p {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+    font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
 
 section.clients .client-list {
   max-width: 50rem;
@@ -3294,7 +3361,7 @@ section.insta {
     .og-grid li a span h4 {
       color: #888888; }
     .og-grid li a span p {
-      font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+      font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
       font-size: 0.875rem; }
   @media only screen and (max-width: 40em) {
     .og-grid li {
@@ -3375,7 +3442,7 @@ body.page-template-tmpl-about {
     .about {
       width: 200%; } }
   .about .serif * {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
     color: #888888;
     font-size: 1rem; }
   .about .contact li {

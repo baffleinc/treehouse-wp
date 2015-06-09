@@ -21,7 +21,6 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 			zoom: 17,
 			events: {
 				tilesloaded: function(map){
-					console.log('tilesloaded');
 					mapObj = map;
 				}
 			}
@@ -33,8 +32,6 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 
 		var params = $location.search();
 		var path = window.location.pathname;
-
-		console.log(params);
 
 		$scope.showContact = false;
 
@@ -61,6 +58,35 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 			}
 		}
 
+
+
+	})
+
+	.directive('fadeIntoView', function($document){
+
+		var directive = {
+			restrict: 'A',
+			link: linkFn
+		};
+
+		return directive;
+
+		function linkFn(scope, el){
+
+
+
+			$document.on('scroll', function(){
+				var elTop = $(el).offset().top;
+				var scrollTop = $(document).scrollTop();
+				var windowHeight = $(window).height();
+
+				if((scrollTop + windowHeight) > elTop){
+					el.addClass('show');
+				} else {
+					el.removeClass('show');
+				}
+			})
+		}
 	});
 
 // jQuery dependant stuff
@@ -69,6 +95,7 @@ $(function() {
 	// Grid.init();
 
 	var $container = $('#og-grid');
+	var slickOpts;
 
 	$container.isotope({
 		itemSelector: '.iso-item'
@@ -110,11 +137,53 @@ $(function() {
 		fitToView: true
 	});
 
-	$('.client-list').slick({
-	  infinite: true,
-	  slidesToShow: 4,
-	  slidesToScroll: 4,
-	  autoplay: true,
-	  autoplaySpeed: 2000,
-	});
+	if(!Modernizr.mq('screen and (max-width: 64em)')){
+		slickOpts = {
+		  infinite: true,
+		  slidesToShow: 4,
+		  slidesToScroll: 4,
+		  autoplay: true,
+		  autoplaySpeed: 2000,
+		}
+	} else {
+		slickOpts = {
+		  infinite: true,
+		  slidesToShow: 2,
+		  slidesToScroll: 2,
+		  autoplay: true,
+		  autoplaySpeed: 2000,
+		}
+	}
+
+	$('.client-list').slick(slickOpts);
+
+	if(!Modernizr.mq('screen and (max-width: 64em)')){
+		var smController = new ScrollMagic.Controller();
+		var wh = $(window).height();
+
+		new ScrollMagic.Scene({ duration: wh })
+		.setTween("#animate", 1, { transform: "translateY(-100px) scale(1.1)", opacity: "0"  })
+		.addTo(smController);
+
+		var textBgOffset = jQuery('#text-image').offset().top;
+		var clientOffset = jQuery('#clients').offset().top;
+
+		new ScrollMagic.Scene({ duration: wh, offset: textBgOffset })
+		.setTween("#text-image", 0.5, { backgroundPosition: 'center 0px' })
+		.addTo(smController);
+
+		new ScrollMagic.Scene({ duration: wh, offset: clientOffset })
+		.setTween("#clients", 0.5, { backgroundPosition: 'center 0px' })
+		.addTo(smController);
+	}
+
+	// grab an element
+	var myElement = document.querySelector("header.header");
+	// construct an instance of Headroom, passing the element
+	var headroom  = new Headroom(myElement);
+	// initialise
+	headroom.init(); 
+
+
+
 });

@@ -1,3 +1,7 @@
+section:not(#hero){
+	background-color: $white;
+}
+
 section#work{
 
 	.row{ max-width: rem-calc(1440); }
@@ -14,6 +18,8 @@ section#work{
 		width: 50%;
 		display: inline-block;
 		float: left;
+		font-size: 1.5rem;
+		letter-spacing: 1px; 
 
 		&.active{ background-color: $dark-blue }
 	}
@@ -83,8 +89,12 @@ section.clients{
 
 	background-size: cover;
 	background-position: center center;
-	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-color: $primary-color;
+
+	@media #{$large-up}{
+		background-position: center -200px;
+	}
 
 	padding: 4rem 0;
 	text-align: center;
@@ -110,11 +120,28 @@ section.clients{
 	h2,
 	p{ color: $white; }
 
-	p{font-family: $font-family-serif; }
+	p{ font-family: $font-family-serif; }
 }
 
 section.columns-3{
 	padding: 4rem 0;
+
+	.columns{
+		opacity: 0;
+		top: 1rem;
+		position: relative;
+
+		transition: all 0.5s $easeOutExpo;
+		transition-delay: 500ms;
+
+		&:nth-of-type(2){ transition-delay: 600ms; }
+		&:nth-of-type(3){ transition-delay: 700ms; }
+
+		&.show{
+			opacity: 1;
+			top: 0;
+		}
+	}
 
 	p{
 		font-family: $font-family-serif;

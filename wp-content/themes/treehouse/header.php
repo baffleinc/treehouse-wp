@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
 
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
 	
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -37,7 +39,7 @@
 </head>
 
 <body <?php body_class(); ?> ng-controller="MainController">
-	<header ng-init="showMenu = false;">
+	<header class="header" ng-init="showMenu = false;">
 		<!-- <div class="row">
 			<div class="small-12 columns"> -->
 				<h1 class="left"><a href="<?php echo home_url() ?>" title="<?php bloginfo('name'); ?>" class="logo"><?php bloginfo('name'); ?></a></h1>

@@ -153,7 +153,9 @@ module.exports = function(grunt) {
 					'angular',
 					'angular-animate',
 					'angular-scroll',
-					'angular-google-maps'
+					'angular-google-maps',
+					'gsap',
+					'scrollmagic'
 				]
 			}
 		}

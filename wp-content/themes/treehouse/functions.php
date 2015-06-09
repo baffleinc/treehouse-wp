@@ -21,8 +21,10 @@
 		
 		wp_enqueue_script( 'jQuery', get_template_directory_uri().'/assets/js/jquery-2.1.3.js', array(), time(), false );
 		wp_enqueue_script( 'vendor.js', get_template_directory_uri().'/assets/js/angular.bower.js', array(), time(), true );
+		wp_enqueue_script( 'gsap.js', get_template_directory_uri().'/assets/js/animation.gsap.js', array(), time(), true );
 		wp_enqueue_script( 'fancybox.js', get_template_directory_uri().'/assets/js/fancybox.js', array('jQuery'), time(), true );
 		wp_enqueue_script( 'fancybox.media.js', get_template_directory_uri().'/assets/js/fancybox.media.js', array('jQuery'), time(), true );
+		wp_enqueue_script( 'headroom.js', get_template_directory_uri().'/assets/js/headroom.js', array(), time(), true );
 		wp_enqueue_script( 'isotope.js', get_template_directory_uri().'/assets/js/isotope.js', array(), time(), true );
 		wp_enqueue_script( 'slick.js', '//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js', array(), time(), true );
 		wp_enqueue_script( 'app.js', get_template_directory_uri().'/assets/js/app.js', array('vendor.js'), time(), true );
