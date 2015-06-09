@@ -7,8 +7,8 @@ get_header();
 ?>
 
 <div class="about" ng-class="{ contact : showContact }">
-	<div class="about-container">
-		<button ng-click="showContact = !showContact">Contact</button>
+	<div class="about-container row">
+		<button class="hide-for-small-only" ng-click="showContact = !showContact">Contact</button>
 		<div class="row">
 			<div class="small-12 columns">
 				<h2 class="text-center page-title">About Treehouse</h2>
@@ -33,8 +33,8 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<div class="contact-container">
-		<button ng-click="showContact = !showContact">About</button>
+	<div class="contact-container row">
+		<button class="hide-for-small-only" ng-click="showContact = !showContact">About</button>
 		<div class="row">
 			<div class="small-12 columns">
 				<h2 class="text-center page-title">Say Hi</h2>
@@ -44,7 +44,7 @@ get_header();
 			<div class="small-12 medium-6 medium-push-6 columns serif">
 				<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]') ?>
 			</div>
-			<div class="small-12 medium-6 medium-pull-6 columns contact">
+			<div class="hide-for-small-only small-12 medium-6 medium-pull-6 columns contact">
 				<ul class="no-bullet">
 					<li>TREEHOUSE STUDIOS</li>
 					<li>FILMMAKERS &amp; PHOTOGRAPHERS</li>

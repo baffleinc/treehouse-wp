@@ -16,8 +16,8 @@
 		.about-container button,
 		.contact-container button{
 			position: absolute;
-			top: 50%;
-			margin-top: rem-calc(-22);
+			top: 1rem;
+			z-index: 99;
 		}
 
 		.about-container button{ right: 0; }
@@ -46,15 +46,8 @@
 
 		}
 	}
-	
-}
 
-body.page-template-tmpl-about{
-	background: url(../images/about-bg.jpg) no-repeat center center;
-	background-size: cover;
-}
-
-.about{
+	.about{
 	height: 100%;
 
 	transition: all 500ms $easeOutExpo;
@@ -68,9 +61,6 @@ body.page-template-tmpl-about{
 	align-items: center;
 	justify-content: center;
 
-	@media #{$medium-up}{
-		width: 200%;
-	}
 
 	.serif *{
 		font-family: $font-family-serif;
@@ -102,5 +92,54 @@ body.page-template-tmpl-about{
 			margin-top: rem-calc(-100);
 			margin-bottom: 0;
 		}
+	}
+}
+	
+}
+
+@media #{$large-up}{
+	.about-container button,
+	.contact-container button{
+		position: absolute;
+		top: 50%;
+		margin-top: rem-calc(-22);
+	}
+}
+
+body.page-template-tmpl-about{
+	background: url(../images/about-bg.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+@media #{$small-only}{
+	.about-container,
+	.contact-container{
+		padding: 4rem 1.5rem 0;
+	}
+
+	h2.page-title{
+		color: $jumbo;
+		font-size: 3rem;
+	}
+
+	body.page-template-tmpl-about{
+		background-attachment: fixed;
+		
+		.columns{
+			p, li, strong{
+				color: $jumbo;
+			}
+			
+		}
+
+		.contact li{
+			font-size: 1.5rem;
+		}
+
+	}
+
+	#gform_submit_button_1{
+		margin-left: 1rem;
+		width: 310px;
 	}
 }

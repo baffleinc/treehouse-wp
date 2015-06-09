@@ -7,7 +7,7 @@
 // to save time. Shame, the other one was fully hectic!
 
 angular.module('thApp', ['uiGmapgoogle-maps'])
-	.controller('MainController', function ($scope, $http, $location){
+	.controller('MainController', function ($scope, $location){
 
 		$scope.coords = {
 			sydney: { latitude: -33.8791282, longitude: 151.2157934 },
@@ -137,7 +137,7 @@ $(function() {
 		fitToView: true
 	});
 
-	if(!Modernizr.mq('screen and (max-width: 64em)')){
+	if(!Modernizr.mq('screen and (max-width: 40em)')){
 		slickOpts = {
 		  infinite: true,
 		  slidesToShow: 4,
