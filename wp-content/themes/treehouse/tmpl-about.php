@@ -6,6 +6,10 @@ get_header();
 
 ?>
 
+<style>
+	body{ background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>); }
+</style>
+
 <div class="about" ng-class="{ contact : showContact }">
 	<div class="about-container row">
 		<button class="hide-for-small-only" ng-click="showContact = !showContact">Contact</button>

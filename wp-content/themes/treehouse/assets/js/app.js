@@ -169,7 +169,7 @@ $(function() {
 
 	$('.client-list').slick(slickOpts);
 
-	if(!Modernizr.mq('screen and (max-width: 64em)')){
+	if(!Modernizr.mq('screen and (max-width: 64em)') && window.location.pathname == '/'){
 		var smController = new ScrollMagic.Controller();
 		var wh = $(window).height();
 

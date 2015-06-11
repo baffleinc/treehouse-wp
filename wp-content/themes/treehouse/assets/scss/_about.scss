@@ -107,7 +107,8 @@
 }
 
 body.page-template-tmpl-about{
-	background: url(../images/about-bg.jpg) no-repeat center center;
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
 }
 
