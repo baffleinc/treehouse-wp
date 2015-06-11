@@ -98,7 +98,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to define default font stacks
 $font-family-sans-serif: 'Bebas Neue', "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-$font-family-serif: 'Montserrat', Cambria, "Times New Roman", Times, serif;
+$font-family-serif: 'Quicksand', Cambria, "Times New Roman", Times, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -245,7 +245,7 @@ $global-rounded: 1000px;
 
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
-// $paragraph-font-weight: $font-weight-normal;
+$paragraph-font-weight: 400;
 $paragraph-font-size: rem-calc(18);
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);

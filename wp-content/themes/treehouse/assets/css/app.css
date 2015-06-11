@@ -2480,7 +2480,7 @@ a {
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1.125rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
@@ -3070,13 +3070,13 @@ header {
   left: 0;
   right: 0;
   z-index: 99;
-  height: 4.375rem;
+  height: 3.25rem;
   background-color: #FFFFFF; }
   header .logo {
     display: block;
     width: 2rem;
     height: 2rem;
-    margin-top: 1.1875rem;
+    margin-top: 0.625rem;
     margin-left: 1rem;
     text-indent: 100%;
     overflow-x: hidden;
@@ -3084,9 +3084,9 @@ header {
     background-image: url(../images/treehouse.svg); }
   header .toggle-menu {
     display: block;
-    width: 4.375rem;
-    height: 4.375rem;
-    line-height: 4.375rem;
+    width: 3.25rem;
+    height: 3.25rem;
+    line-height: 3.25rem;
     text-align: center;
     color: #888888;
     font-size: 1.5rem;
@@ -3096,12 +3096,12 @@ header {
       transform: rotate(90deg); }
   header ul {
     transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
-    transform: translateY(-4.375rem); }
+    transform: translateY(-3.25rem); }
     header ul.visible {
       transform: translateY(0); }
     header ul li a {
       display: block;
-      line-height: 4.375rem;
+      line-height: 3.25rem;
       font-size: 1.125rem;
       color: #888888; }
 
@@ -3114,7 +3114,7 @@ footer {
   background-color: #6BA3B8;
   line-height: 4.375rem;
   color: #FFFFFF;
-  font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
+  font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
   footer ul.social {
     margin-top: 1.1875rem; }
   footer .locations a {
@@ -3126,7 +3126,7 @@ footer {
 *
 **/
 .button.ghost, button.ghost {
-  font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
+  font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
   border: 1px solid #FFFFFF;
   color: #FFFFFF;
   transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
@@ -3185,7 +3185,7 @@ section.hero {
     text-align: center; }
   section.hero ul.social {
     position: absolute;
-    bottom: 1.25rem;
+    bottom: 3rem;
     left: 1.25rem;
     margin-bottom: 0; }
   section.hero svg {
@@ -3223,7 +3223,7 @@ section#work {
       display: inline-block;
       margin: 1rem; }
       section#work .categories li a.button {
-        font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
+        font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
   section#work .thumbs .item {
     margin-bottom: 1rem; }
     section#work .thumbs .item > div {
@@ -3250,7 +3250,7 @@ section#work {
       font-size: 1.75rem;
       color: #777777; }
     section#work .thumbs .item p {
-      font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
+      font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
       font-size: 0.875rem;
       font-style: italic;
       color: #777777; }
@@ -3283,7 +3283,7 @@ section.text-over-image, section.clients {
   section.text-over-image h2, section.text-over-image p, section.clients h2, section.clients p {
     color: #FFFFFF; }
   section.text-over-image p, section.clients p {
-    font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
+    font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
 
 section.columns-3 {
   padding: 4rem 0; }
@@ -3301,7 +3301,7 @@ section.columns-3 {
       opacity: 1;
       top: 0; }
   section.columns-3 p {
-    font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif; }
+    font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
 
 section.clients .client-list {
   max-width: 50rem;
@@ -3361,7 +3361,7 @@ section.insta {
     .og-grid li a span h4 {
       color: #888888; }
     .og-grid li a span p {
-      font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
+      font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
       font-size: 0.875rem; }
   @media only screen and (max-width: 40em) {
     .og-grid li {
@@ -3434,7 +3434,7 @@ section.insta {
     .about.contact {
       transform: translateX(-50%); }
     .about .serif * {
-      font-family: 'Montserrat', Cambria, "Times New Roman", Times, serif;
+      font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
       color: #888888;
       font-size: 1rem; }
     .about .contact li {

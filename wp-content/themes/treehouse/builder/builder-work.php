@@ -13,13 +13,13 @@
 ?>
 
 <section id="work">
-	<div class="select-type iso-filters">
+	<div class="select-type iso-filters" data-filter-group="type">
 		<button class="large" data-filter=".video">Moving</button>
 		<button class="large" data-filter=".photo">Still</button>
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<ul class="no-bullet categories iso-filters">
+			<ul class="no-bullet categories iso-filters" data-filter-group="industry">
 				<li><button class="small dark ghost" data-filter="*">All</button></li>
 				<?php foreach($cats as $c) : ?>
 				<li><button class="small dark ghost" data-filter=".<?php echo $c->slug ?>"><?php echo $c->name ?></button></li>

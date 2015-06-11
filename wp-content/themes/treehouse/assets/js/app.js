@@ -107,17 +107,29 @@ $(function() {
 
 	$container.css('height', 'auto');
 
+	var filters = {};
+
 	// filter items on button click
 	$('.iso-filters').on( 'click', 'button', function() {
-	  $('.iso-filters .active').removeClass('active');
+
+	  var group = $(this).parents('[data-filter-group]');
+	  var fgroup = group.attr('data-filter-group');
+
+	  filters[fgroup] = $(this).attr('data-filter');
+
+	  group.find('.active').removeClass('active');
 	  $(this).addClass('active');
-	  var filterValue = $(this).attr('data-filter');
+
+	  var filterValue = $.map(filters, function(el){
+	  	return [el]
+	  }).join('');
+
 	  $container.isotope({ filter: filterValue });
 	});
 
 	$(".fancybox.gallery").fancybox({
-		openEffect	: 'elastic',
-		closeEffect	: 'elastic',
+		openEffect	: 'fade',
+		closeEffect	: 'fade',
 		helpers: {
 		    overlay: {
 		      locked: false
@@ -126,8 +138,8 @@ $(function() {
 	});
 
 	$(".fancybox.video").fancybox({
-		openEffect	: 'elastic',
-		closeEffect	: 'elastic',
+		openEffect	: 'fade',
+		closeEffect	: 'fade',
 		helpers: {
 		    overlay: {
 		      locked: false

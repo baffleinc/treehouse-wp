@@ -21,7 +21,7 @@ body.admin-bar header{ top: rem-calc(28) }
     transform: translateY(-100px);
 }
 
-$header-height: 70;
+$header-height: 52;
 
 @media #{$large-up}{
 	video#bgvid {
