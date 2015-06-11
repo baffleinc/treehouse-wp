@@ -177,11 +177,11 @@ $(function() {
 		.setTween("#animate", 1, { transform: "translateY(-100px) scale(1.1)", opacity: "0"  })
 		.addTo(smController);
 
-		var textBgOffset = jQuery('#text-image').offset().top;
+		var textBgOffset = jQuery('#about').offset().top;
 		var clientOffset = jQuery('#clients').offset().top;
 
 		new ScrollMagic.Scene({ duration: wh, offset: textBgOffset })
-		.setTween("#text-image", 0.5, { backgroundPosition: 'center 0px' })
+		.setTween("#about", 0.5, { backgroundPosition: 'center 0px' })
 		.addTo(smController);
 
 		new ScrollMagic.Scene({ duration: wh, offset: clientOffset })

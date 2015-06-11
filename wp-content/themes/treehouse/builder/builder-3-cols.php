@@ -6,8 +6,10 @@
 	*/
 -->
 
-<section class="columns-3">
+<section class="columns-3" id="process">
 	<div class="row">
+
+		<h2 class="text-center">Our Process</h2>
 
 		<?php if(have_rows('columns')) : while(have_rows('columns')) : the_row(); ?>
 
