@@ -3263,7 +3263,8 @@ section#work {
       text-align: center; }
     section#work .thumbs .iso-item h4 {
       font-size: 1.75rem;
-      color: #777777; }
+      color: #777777;
+      letter-spacing: 1px; }
     section#work .thumbs .iso-item p {
       font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
       font-size: 0.875rem;
