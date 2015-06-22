@@ -14,6 +14,7 @@
 
 <section id="work">
 	<div class="select-type iso-filters" data-filter-group="type">
+		<button class="large active reset" data-filter="*">Everything</button>
 		<button class="large" data-filter=".video">Moving</button>
 		<button class="large" data-filter=".photo">Still</button>
 	</div>
@@ -51,16 +52,19 @@
 			if(!empty($images['images'])) $first_image = $images['images'][0]['gallery_image']['sizes']['hero-image'];
 		?>
 			<li class="iso-item <?php echo $class_string ?>">
+					<img src="<?php the_field('thumbnail', $project->ID) ?>" alt="<?php echo $project->post_title ?>"/>
 				<?php if(get_field('video', $project->ID)) : ?>
 					<a class="fancybox video" href="<?php the_field('video', $project->ID) ?>" data-title="<?php echo $project->post_content ?>" rel="fancy-<?php echo $project->ID ?>" title="<?php the_field('description', $project->ID) ?>">
 				<?php else : ?>
 					<a class="fancybox gallery" href="<?php echo $first_image ?>" data-title="<?php echo $project->post_content ?>" rel="fancy-<?php echo $project->ID ?>" title="<?php the_field('description', $project->ID) ?>">
 				<?php endif; ?>
-					<img src="<?php the_field('thumbnail', $project->ID) ?>" alt="<?php echo $project->post_title ?>"/>
-					<span class="info">
-						<h4><?php the_field('title', $project->ID) ?></h4>
-						<p><?php the_field('subtitle', $project->ID) ?></p>
-					</span>
+					<div class="table">
+						<div class="cell">
+							<h4><?php the_field('title', $project->ID) ?></h4>
+							<p><?php the_field('subtitle', $project->ID) ?></p>
+						</div>
+					</div>
+						
 				</a>
 			</li>
 		<?php endforeach; ?>

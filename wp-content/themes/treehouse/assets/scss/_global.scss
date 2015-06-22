@@ -4,6 +4,10 @@ body.admin-bar header{ top: rem-calc(28) }
 	#wpadminbar{ top: -46px }
 }
 
+p,
+button,
+.button{ text-transform: uppercase; }
+
 
 /**
 *
@@ -92,6 +96,7 @@ header{
 			a{
 				display: block;
 				line-height: rem-calc($header-height);
+				letter-spacing: 1px;
 				font-size: rem-calc(18);
 				color: $jumbo;
 			}
@@ -146,6 +151,11 @@ button.ghost{
 	&:hover{
 		transform: scale(1.1);
 	}
+}
+
+.button:not(.ghost),
+button:not(.ghost){
+	letter-spacing: 2px;
 }
 
 

@@ -11,7 +11,7 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 
 		$scope.coords = {
 			sydney: { latitude: -33.8791282, longitude: 151.2157934 },
-			melbourne: { latitude: -37.8272442, longitude: 144.9933963 },
+			melbourne: { latitude: -37.826466, longitude: 144.992912 },
 		}
 
 		var mapObj;
@@ -19,6 +19,7 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 		$scope.map = { 
 			center: $scope.coords.melbourne, 
 			zoom: 17,
+			 scrollwheel: false,
 			events: {
 				tilesloaded: function(map){
 					mapObj = map;
@@ -109,22 +110,32 @@ $(function() {
 
 	var filters = {};
 
+
+
 	// filter items on button click
 	$('.iso-filters').on( 'click', 'button', function() {
 
-	  var group = $(this).parents('[data-filter-group]');
-	  var fgroup = group.attr('data-filter-group');
+	  if($(this).hasClass('reset')){
+	  	$('.iso-filters .active').removeClass('active');
+  		$container.isotope({ filter: filterValue });
+  	  } else {
+  	  	var group = $(this).parents('[data-filter-group]');
+		  var fgroup = group.attr('data-filter-group');
 
-	  filters[fgroup] = $(this).attr('data-filter');
+		  filters[fgroup] = $(this).attr('data-filter');
 
-	  group.find('.active').removeClass('active');
+		  group.find('.active').removeClass('active');
+
+		  var filterValue = $.map(filters, function(el){
+		  	return [el]
+		  }).join('');
+
+		  $container.isotope({ filter: filterValue });
+  	  }
+
 	  $(this).addClass('active');
 
-	  var filterValue = $.map(filters, function(el){
-	  	return [el]
-	  }).join('');
-
-	  $container.isotope({ filter: filterValue });
+		  
 	});
 
 	$(".fancybox.gallery").fancybox({

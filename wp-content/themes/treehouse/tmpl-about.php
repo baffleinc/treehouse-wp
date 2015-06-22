@@ -10,15 +10,20 @@ get_header();
 	body{ background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>); }
 </style>
 
+<button class="hide-for-small-only switch-screen show-contact" ng-hide="showContact" ng-click="showContact = !showContact">Contact</button>
+<button class="hide-for-small-only switch-screen show-about" ng-show="showContact" ng-click="showContact = !showContact">About</button>
+
 <div class="about" ng-class="{ contact : showContact }">
+
+	
+
 	<div class="about-container row">
-		<button class="hide-for-small-only" ng-click="showContact = !showContact">Contact</button>
 		<div class="row">
 			<div class="small-12 columns">
 				<h2 class="text-center page-title">About Treehouse</h2>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row flex-center">
 			<div class="small-12 medium-6 medium-push-6 columns serif">
 				<p>We make a whole bunch of shit, talk to us we’ll tell youwhat you want to hear but won’t deliver. eata dick. All I want is your money</p>
 
@@ -38,13 +43,13 @@ get_header();
 		</div>
 	</div>
 	<div class="contact-container row">
-		<button class="hide-for-small-only" ng-click="showContact = !showContact">About</button>
+		
 		<div class="row">
 			<div class="small-12 columns">
 				<h2 class="text-center page-title">Say Hi</h2>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row flex-center">
 			<div class="small-12 medium-6 medium-push-6 columns serif">
 				<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]') ?>
 			</div>

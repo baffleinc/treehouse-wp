@@ -7,21 +7,23 @@
 			width: 200%;
 		}
 
+		.switch-screen{
+		}
+
 		.about-container,
 		.contact-container{
 			width: 100%;
 			position: relative;
 		}
 
-		.about-container button,
-		.contact-container button{
+		button.switch-screen{
 			position: absolute;
-			top: 1rem;
+			top: 50%;
 			z-index: 99;
 		}
 
-		.about-container button{ right: 0; }
-		.contact-container button { left: 0; }
+		button.show-contact{ right: 0; }
+		button.show-about { left: 0; }
 		
 		#gform_wrapper_1{
 			margin: 0;
@@ -33,10 +35,13 @@
 
 			li.gfield{
 				clear: none!important;
+				label{ margin-top: 0; }
 			}
 
 			textarea,
 			input{ width: 100%; padding: 1rem; }
+
+			textarea{ height: 100px; }
 		}
 
 		#gform_submit_button_1{
@@ -55,6 +60,11 @@
 	&.contact{
 		transform: translateX(-50%);
 	}
+
+	.flex-center{
+		display: flex;
+		align-items: center;
+	}
 	
 
 	display: flex;
@@ -71,6 +81,7 @@
 	.contact{
 		li{
 			font-size: rem-calc(32);
+			letter-spacing: 1px;
 
 			a:hover{
 				color: $primary-color;
