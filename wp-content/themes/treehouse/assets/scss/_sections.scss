@@ -15,7 +15,7 @@ section#work{
 	padding: 0 0 4rem;
 
 	.select-type button{
-		width: 33.33%;
+		width: 50%;
 		display: inline-block;
 		float: left;
 		font-size: 1.5rem;
@@ -81,7 +81,7 @@ section#work{
 			}
 
 			h4{
-				font-size: rem-calc(28);
+				font-size: rem-calc(27);
 				color: $monsoon;
 				letter-spacing: 1px;
 			}
@@ -89,8 +89,8 @@ section#work{
 			p{
 				font-family: $font-family-serif;
 				font-size: rem-calc(14);
-				font-style: italic;
 				color: $monsoon;
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -103,6 +103,13 @@ section.clients{
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-color: $primary-color;
+
+	&:before{
+		display: block;
+		width: 20px;
+		height: 20px;
+		background-color: red;
+	}
 
 	@media #{$large-up}{
 		background-position: center -200px;
@@ -138,8 +145,16 @@ section.clients{
 section.columns-3{
 	padding: 4rem 0 6rem;
 
-	h2{
+	h1{
 		margin-bottom: 2rem;
+		color: $jumbo;
+	}
+
+	h2{ color: $jumbo; }
+
+	img.icon{ 
+		display: inline-block;
+		margin: 2rem 0 2rem;
 	}
 
 	.columns{

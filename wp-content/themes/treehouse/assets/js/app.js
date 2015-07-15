@@ -75,18 +75,19 @@ angular.module('thApp', ['uiGmapgoogle-maps'])
 		function linkFn(scope, el){
 
 
+			if(!Modernizr.mq('screen and (max-width: 40em)')){
+				$document.on('scroll', function(){
+					var elTop = $(el).offset().top;
+					var scrollTop = $(document).scrollTop();
+					var windowHeight = $(window).height();
 
-			$document.on('scroll', function(){
-				var elTop = $(el).offset().top;
-				var scrollTop = $(document).scrollTop();
-				var windowHeight = $(window).height();
-
-				if((scrollTop + windowHeight) > elTop){
-					el.addClass('show');
-				} else {
-					el.removeClass('show');
-				}
-			})
+					if((scrollTop + windowHeight) > elTop){
+						el.addClass('show');
+					} else {
+						el.removeClass('show');
+					}
+				})
+			}
 		}
 	});
 

@@ -42,7 +42,7 @@
 	<header class="header" ng-init="showMenu = false;">
 		<!-- <div class="row">
 			<div class="small-12 columns"> -->
-				<h1 class="left"><a href="<?php echo home_url() ?>" title="<?php bloginfo('name'); ?>" class="logo"><?php bloginfo('name'); ?></a></h1>
+				<h1 class="left"><a href="<?php echo home_url() ?>" title="<?php bloginfo('name'); ?>" class="logo"><img src="<?php echo get_template_directory_uri() ?>/assets/images/header-logo.svg" alt=""></a></h1>
 				<a ng-click="showMenu = !showMenu" ng-class="{ rotate : showMenu }" class="right toggle-menu"><i class="fa fa-bars"></i></a>
 				<ul class="inline-list right" ng-class="{ visible : showMenu }">
 					<li><a href="<?php echo home_url('/#work') ?>">Work</a></li>

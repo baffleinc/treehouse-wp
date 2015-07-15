@@ -14,7 +14,7 @@
 
 <section id="work">
 	<div class="select-type iso-filters" data-filter-group="type">
-		<button class="large active reset" data-filter="*">Everything</button>
+		<!-- <button class="large active reset" data-filter="*">Everything</button> -->
 		<button class="large" data-filter=".video">Moving</button>
 		<button class="large" data-filter=".photo">Still</button>
 	</div>
