@@ -18,14 +18,19 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>
 
-	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-
+<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 	
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<?php wp_head(); ?>
+
+	<script>
+		$(window).on('load', function(){
+			$('#loading').fadeOut();
+		});
+	</script>
 
 	<?php
 
@@ -39,6 +44,10 @@
 </head>
 
 <body <?php body_class(); ?> ng-controller="MainController">
+	<div id="loading">
+		<img src="<?php echo get_template_directory_uri() ?>/assets/images/loading.gif" alt="">
+		<p><strong>Loading</strong></p>
+	</div>
 	<header class="header" ng-init="showMenu = false;">
 		<!-- <div class="row">
 			<div class="small-12 columns"> -->

@@ -9,7 +9,7 @@
 	
 	<div class="content" id="animate">
 		<?php get_template_part('modules/module', 'logo') ?>
-		<a href="<?php the_field('showreel_url', 'option') ?>" class="fancybox video button ghost">Showreel</a>
+		<a href="<?php the_field('showreel_vimeo', 'option') ?>" class="fancybox video button ghost">Showreel</a>
 	</div>
 
 	<?php get_template_part( 'modules/module', 'social' ) ?>

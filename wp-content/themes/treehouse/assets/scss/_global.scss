@@ -15,6 +15,37 @@ button,
 	}
 
 	.fancybox-close { right: -40px; }
+
+	.fancybox-next{ right: -60px; }
+	.fancybox-prev{ left: -60px; }
+	.fancybox-nav{ opacity: 0.5 }
+}
+
+
+#loading{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 999;
+
+	background-color: #eee;
+	text-align: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	img{ margin-top: -4rem; }
+
+	p{
+		margin-top: -4rem;
+		color: $jumbo;
+		letter-spacing: 10px;
+	}
 }
 
 
@@ -125,12 +156,13 @@ header{
 
 footer{
 	background-color: $primary-color;
-	line-height: rem-calc(70);
+	line-height: rem-calc($header-height);
+	height: rem-calc($header-height);
 	color: $white;
 	font-family: $font-family-serif;
 
 	ul.social{
-		margin-top: rem-calc(19);
+		margin-top: rem-calc(9);
 	}
 
 	.locations a{
@@ -140,7 +172,9 @@ footer{
 	p.addresses{
 		color: $white;
 		text-transform: uppercase;
-		line-height: rem-calc(70);
+		line-height: rem-calc($header-height);
+		margin-bottom: 0;
+		font-size: 1rem;
 	}
 }
 
@@ -191,8 +225,6 @@ ul.social{
 	}
 	a{
 		color: $white;
-		border: 1px solid $white;
-		border-radius: $global-rounded;
 		
 		display: inline-block;
 		height: 2rem;

@@ -99,7 +99,7 @@ $(function() {
 	var $container = $('#og-grid');
 	var slickOpts;
 
-	$container.isotope({
+	var $contIso = $container.isotope({
 		itemSelector: '.iso-item'
 	});
 
@@ -143,10 +143,11 @@ $(function() {
 		openEffect	: 'fade',
 		closeEffect	: 'fade',
 		helpers: {
-		    overlay: {
-		      locked: false
-		    }
-		  }
+	    overlay: {
+	      locked: false
+	    }
+	  },
+
 	});
 
 	$(".fancybox.video").fancybox({
@@ -158,6 +159,9 @@ $(function() {
 		    },
 		    media: {}
 		},
+		width: 1000,
+		height: 640,
+		aspectRation: true,
 		fitToView: true
 	});
 
@@ -189,16 +193,18 @@ $(function() {
 		.setTween("#animate", 1, { transform: "translateY(-100px) scale(1.1)", opacity: "0"  })
 		.addTo(smController);
 
-		var textBgOffset = jQuery('#about').offset().top;
-		var clientOffset = jQuery('#clients').offset().top;
+			// var textBgOffset = jQuery('#about').offset().top;
+			// var clientOffset = jQuery('#clients').offset().top;
 
-		new ScrollMagic.Scene({ duration: wh, offset: textBgOffset })
-		.setTween("#about", 0.5, { backgroundPosition: 'center 0px' })
-		.addTo(smController);
+			new ScrollMagic.Scene({ duration: wh, triggerElement: '#trigger-about' })
+			.setTween("#about", 1, { backgroundPosition: 'center 0px' })
+			.addTo(smController);
 
-		new ScrollMagic.Scene({ duration: wh, offset: clientOffset })
-		.setTween("#clients", 0.5, { backgroundPosition: 'center 0px' })
-		.addTo(smController);
+			new ScrollMagic.Scene({ duration: wh, triggerElement: '#trigger-clients' })
+			.setTween("#clients", 1, { backgroundPosition: 'center 0px' })
+			.addTo(smController);
+
+			
 	}
 
 	// grab an element
@@ -207,7 +213,5 @@ $(function() {
 	var headroom  = new Headroom(myElement);
 	// initialise
 	headroom.init(); 
-
-
 
 });

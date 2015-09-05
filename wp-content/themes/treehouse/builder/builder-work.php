@@ -70,14 +70,14 @@
 		<?php endforeach; ?>
 		</ul>
 		<div class="clearfix"></div>
-		<div class="hide">
+		<div>
 			<?php 
 				foreach($projects as $project) : 
 					$images = get_fields($project->ID);
 					if(!empty($images['images'])) : 
 						foreach($images['images'] as $i) :
 			?>
-				<a class="fancybox" rel="fancy-<?php echo $project->ID ?>" href="<?php echo $i['gallery_image']['sizes']['hero-image'] ?>"title="<?php the_field('description', $project->ID) ?>">fancybox image</a>
+				<a class="fancybox gallery hide" rel="fancy-<?php echo $project->ID ?>" href="<?php echo $i['gallery_image']['sizes']['hero-image'] ?>"title="<?php the_field('description', $project->ID) ?>">fancybox image</a>
 			<?php  endforeach; endif; endforeach; ?>
 		</div>
 	</div>

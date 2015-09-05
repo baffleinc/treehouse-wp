@@ -99,6 +99,28 @@ section#work{
 section.text-over-image,
 section.clients{
 
+	.white-arrow{
+		position: absolute;
+		z-index: 999;
+		left: 50%;
+		top: 0;
+		margin-left: -20px;
+		width: 40px;
+		height: 40px;
+		border: 20px solid transparent;
+		border-top-color: #fff;
+	}
+
+	.notch{
+		height: 20px;
+		width: 100%;
+		background: url(../images/notch.png) no-repeat center center;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+	}
+
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -115,7 +137,7 @@ section.clients{
 		background-position: center -200px;
 	}
 
-	padding: 4rem 0;
+	padding: 5rem 0;
 	text-align: center;
 
 	position: relative;
@@ -136,6 +158,7 @@ section.clients{
 		z-index: 9;
 	}
 
+	h1,
 	h2,
 	p{ color: $white; }
 
@@ -150,7 +173,13 @@ section.columns-3{
 		color: $jumbo;
 	}
 
-	h2{ color: $jumbo; }
+	h2{ 
+		color: $jumbo; 
+		font-family: $font-family-serif;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 0;
+	}
 
 	img.icon{ 
 		display: inline-block;
@@ -176,6 +205,7 @@ section.columns-3{
 
 	p{
 		font-family: $font-family-serif;
+		font-size: rem-calc(15);
 		margin-top: 1rem;
 		max-width: 200px;
 		margin: 1rem auto 0;
@@ -188,7 +218,7 @@ section.clients{
 		max-width: rem-calc(800);
 		margin: 0 auto;
 
-		img{ padding: rem-calc(20); }
+		img{ padding: rem-calc(20) rem-calc(40); }
 		button{ display: none!important; }
 	}
 }
