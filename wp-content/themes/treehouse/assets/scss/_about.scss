@@ -74,7 +74,7 @@
 
 	.serif *{
 		font-family: $font-family-serif;
-		color: $jumbo;
+		color: $white;
 		font-size: 1rem;
 	}
 
@@ -88,11 +88,11 @@
 			}
 		}
 
-		*{ color: $jumbo; }
+		*{ color: $white; }
 	}
 
 	h2.page-title{
-		color: $jumbo;
+		color: $white;
 		font-size: rem-calc(52);
 	}
 }
@@ -100,7 +100,7 @@
 @media #{$medium-up}{
 	body.page-template-tmpl-about{
 		footer{
-			margin-top: rem-calc(-100);
+			margin-top: rem-calc(-50);
 			margin-bottom: 0;
 		}
 	}
@@ -130,7 +130,7 @@ body.page-template-tmpl-about{
 	}
 
 	h2.page-title{
-		color: $jumbo;
+		color: $white;
 		font-size: 3rem;
 	}
 
@@ -139,7 +139,7 @@ body.page-template-tmpl-about{
 		
 		.columns{
 			p, li, strong{
-				color: $jumbo;
+				color: $white;
 			}
 		}
 

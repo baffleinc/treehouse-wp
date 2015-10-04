@@ -42,8 +42,7 @@ button,
 	img{ margin-top: -4rem; }
 
 	p{
-		margin-top: -4rem;
-		color: $jumbo;
+		color: $white;
 		letter-spacing: 10px;
 	}
 }
@@ -142,6 +141,8 @@ header{
 				letter-spacing: 1px;
 				font-size: rem-calc(18);
 				color: $jumbo;
+				font-family: $font-family-serif;
+				font-weight: bold;
 			}
 		}
 	}
@@ -163,6 +164,7 @@ footer{
 
 	ul.social{
 		margin-top: rem-calc(9);
+		margin-bottom: 0;
 	}
 
 	.locations a{

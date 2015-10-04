@@ -27,6 +27,28 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_56108377b4157",
+                            "label": "3 Column Title",
+                            "name": "3-col-title",
+                            "prefix": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
                             "key": "field_55363b3b137c3",
                             "label": "Columns",
                             "name": "columns",
@@ -304,7 +326,9 @@
                     "name": "maps",
                     "label": "Maps",
                     "display": "row",
-                    "sub_fields": [],
+                    "sub_fields": [
+
+                    ],
                     "min": "",
                     "max": ""
                 },
@@ -392,7 +416,9 @@
                     "name": "work",
                     "label": "Work",
                     "display": "row",
-                    "sub_fields": [],
+                    "sub_fields": [
+
+                    ],
                     "min": "",
                     "max": ""
                 }
@@ -414,5 +440,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1433843436
+    "modified": 1443922845
 }

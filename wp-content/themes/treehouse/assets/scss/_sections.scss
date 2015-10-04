@@ -4,6 +4,10 @@ section:not(#hero){
 
 section#work{
 
+	ul#og-grid{
+		margin-left: rem-calc(30);
+	}
+
 	.row{ max-width: rem-calc(1440); }
 
 	.iso-filters button.active{
@@ -26,6 +30,7 @@ section#work{
 
 	.categories{
 		text-align: center;
+		margin-left: rem-calc(-10);
 
 		li{
 			display: inline-block;
@@ -179,6 +184,7 @@ section.columns-3{
 		text-transform: uppercase;
 		font-weight: 700;
 		letter-spacing: 0;
+		font-size: rem-calc(16);
 	}
 
 	img.icon{ 

@@ -3085,8 +3085,7 @@ p, button, .button {
   #loading img {
     margin-top: -4rem; }
   #loading p {
-    margin-top: -4rem;
-    color: #939698;
+    color: #FFFFFF;
     letter-spacing: 10px; }
 
 /**
@@ -3159,7 +3158,9 @@ header {
       line-height: 3.25rem;
       letter-spacing: 1px;
       font-size: 1.125rem;
-      color: #939698; }
+      color: #939698;
+      font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
+      font-weight: bold; }
 
 /**
 *
@@ -3173,7 +3174,8 @@ footer {
   color: #FFFFFF;
   font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
   footer ul.social {
-    margin-top: 0.5625rem; }
+    margin-top: 0.5625rem;
+    margin-bottom: 0; }
   footer .locations a {
     color: #FFFFFF; }
   footer p.addresses {
@@ -3267,6 +3269,8 @@ section:not(#hero) {
 
 section#work {
   padding: 0 0 4rem; }
+  section#work ul#og-grid {
+    margin-left: 1.875rem; }
   section#work .row {
     max-width: 90rem; }
   section#work .iso-filters button.active {
@@ -3282,7 +3286,8 @@ section#work {
     section#work .select-type button.active {
       background-color: #002D5C; }
   section#work .categories {
-    text-align: center; }
+    text-align: center;
+    margin-left: -0.625rem; }
     section#work .categories li {
       display: inline-block;
       margin: 1rem; }
@@ -3391,7 +3396,8 @@ section.columns-3 {
     font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    font-size: 1rem; }
   section.columns-3 img.icon {
     display: inline-block;
     margin: 2rem 0 2rem; }
@@ -3552,7 +3558,7 @@ section.insta {
       align-items: center; }
     .about .serif * {
       font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
-      color: #939698;
+      color: #FFFFFF;
       font-size: 1rem; }
     .about .contact li {
       font-size: 2rem;
@@ -3560,13 +3566,13 @@ section.insta {
       .about .contact li a:hover {
         color: #6BA3B8; }
     .about .contact * {
-      color: #939698; }
+      color: #FFFFFF; }
     .about h2.page-title {
-      color: #939698;
+      color: #FFFFFF;
       font-size: 3.25rem; }
   @media only screen and (min-width:40.0625em) {
     body.page-template-tmpl-about footer {
-      margin-top: -6.25rem;
+      margin-top: -3.125rem;
       margin-bottom: 0; } } }
 
 @media only screen and (min-width:64.0625em) {
@@ -3584,12 +3590,12 @@ body.page-template-tmpl-about {
   .about-container, .contact-container {
     padding: 4rem 1.5rem 0; }
   h2.page-title {
-    color: #939698;
+    color: #FFFFFF;
     font-size: 3rem; }
   body.page-template-tmpl-about {
     background-attachment: fixed; }
     body.page-template-tmpl-about .columns p, body.page-template-tmpl-about .columns li, body.page-template-tmpl-about .columns strong {
-      color: #939698; }
+      color: #FFFFFF; }
     body.page-template-tmpl-about .contact li {
       font-size: 1.5rem; }
   #gform_submit_button_1 {
