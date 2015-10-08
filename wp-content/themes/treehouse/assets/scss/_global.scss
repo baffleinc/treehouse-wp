@@ -31,7 +31,7 @@ button,
 
 	z-index: 999;
 
-	background-color: #eee;
+	background-color: #cde9fe;
 	text-align: center;
 
 	display: flex;
@@ -42,6 +42,7 @@ button,
 	img{ margin-top: -4rem; }
 
 	p{
+		margin-top: -4rem;
 		color: $white;
 		letter-spacing: 10px;
 	}
@@ -139,10 +140,10 @@ header{
 				display: block;
 				line-height: rem-calc($header-height);
 				letter-spacing: 1px;
-				font-size: rem-calc(18);
+				font-size: rem-calc(17);
+				text-transform: uppercase;
 				color: $jumbo;
 				font-family: $font-family-serif;
-				font-weight: bold;
 			}
 		}
 	}

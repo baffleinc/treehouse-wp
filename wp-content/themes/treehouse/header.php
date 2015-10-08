@@ -45,6 +45,7 @@
 
 <body <?php body_class(); ?> ng-controller="MainController">
 	<div id="loading">
+		<img src="<?php echo get_template_directory_uri() ?>/assets/images/loading.gif" alt="">
 		<p><strong>Loading</strong></p>
 	</div>
 	<header class="header" ng-init="showMenu = false;">

@@ -100,7 +100,7 @@
 @media #{$medium-up}{
 	body.page-template-tmpl-about{
 		footer{
-			margin-top: rem-calc(-50);
+			margin-top: rem-calc(-84);
 			margin-bottom: 0;
 		}
 	}
@@ -109,6 +109,12 @@
 }
 
 @media #{$large-up}{
+
+	.about-container,
+	.contact-container{
+		margin-top: -3rem;
+	}
+
 	.about-container button,
 	.contact-container button{
 		position: absolute;

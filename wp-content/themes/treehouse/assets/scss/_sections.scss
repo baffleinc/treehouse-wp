@@ -4,9 +4,12 @@ section:not(#hero){
 
 section#work{
 
-	ul#og-grid{
-		margin-left: rem-calc(30);
+	@media #{$medium-up} {
+		ul#og-grid{
+			margin-left: rem-calc(30);
+		}
 	}
+		
 
 	.row{ max-width: rem-calc(1440); }
 
@@ -69,6 +72,12 @@ section#work{
 				width: 100%;
 				height: 100%;
 				padding: 1rem;
+			}
+
+			@media #{$small-only}{
+				a{
+					padding: 0 10px 20px 10px!important;
+				}
 			}
 
 			.table{
@@ -239,6 +248,7 @@ section.insta{
 	h2{
 		text-align: center;
 		font-size: rem-calc(48);
+		color: $jumbo;
 	}
 
 	#sbi_images{

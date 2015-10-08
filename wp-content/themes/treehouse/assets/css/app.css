@@ -1960,9 +1960,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   background-color: transparent;
   border-style: solid;
   border-width: 1px;
-  border-color: #939698;
+  border-color: #FFFFFF;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.75);
+  color: #939698;
   display: block;
   font-family: inherit;
   font-size: 0.875rem;
@@ -2078,8 +2078,8 @@ select {
   background-repeat: no-repeat;
   border-style: solid;
   border-width: 1px;
-  border-color: #939698;
-  color: rgba(0, 0, 0, 0.75);
+  border-color: #FFFFFF;
+  color: #939698;
   font-family: inherit;
   font-size: 0.875rem;
   line-height: normal;
@@ -3076,7 +3076,7 @@ p, button, .button {
   right: 0;
   bottom: 0;
   z-index: 999;
-  background-color: #eee;
+  background-color: #cde9fe;
   text-align: center;
   display: flex;
   align-items: center;
@@ -3085,6 +3085,7 @@ p, button, .button {
   #loading img {
     margin-top: -4rem; }
   #loading p {
+    margin-top: -4rem;
     color: #FFFFFF;
     letter-spacing: 10px; }
 
@@ -3157,10 +3158,10 @@ header {
       display: block;
       line-height: 3.25rem;
       letter-spacing: 1px;
-      font-size: 1.125rem;
+      font-size: 1.0625rem;
+      text-transform: uppercase;
       color: #939698;
-      font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
-      font-weight: bold; }
+      font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
 
 /**
 *
@@ -3269,8 +3270,9 @@ section:not(#hero) {
 
 section#work {
   padding: 0 0 4rem; }
-  section#work ul#og-grid {
-    margin-left: 1.875rem; }
+  @media only screen and (min-width:40.0625em) {
+    section#work ul#og-grid {
+      margin-left: 1.875rem; } }
   section#work .row {
     max-width: 90rem; }
   section#work .iso-filters button.active {
@@ -3313,6 +3315,9 @@ section#work {
       width: 100%;
       height: 100%;
       padding: 1rem; }
+    @media only screen and (max-width: 40em) {
+      section#work .thumbs .iso-item a {
+        padding: 0 10px 20px 10px !important; } }
     section#work .thumbs .iso-item .table {
       display: table;
       height: 100%;
@@ -3436,7 +3441,8 @@ section.insta {
     display: none !important; }
   section.insta h2 {
     text-align: center;
-    font-size: 3rem; }
+    font-size: 3rem;
+    color: #939698; }
   section.insta #sbi_images {
     overflow-x: scroll;
     white-space: nowrap;
@@ -3572,10 +3578,12 @@ section.insta {
       font-size: 3.25rem; }
   @media only screen and (min-width:40.0625em) {
     body.page-template-tmpl-about footer {
-      margin-top: -3.125rem;
+      margin-top: -5.25rem;
       margin-bottom: 0; } } }
 
 @media only screen and (min-width:64.0625em) {
+  .about-container, .contact-container {
+    margin-top: -3rem; }
   .about-container button, .contact-container button {
     position: absolute;
     top: 50%;

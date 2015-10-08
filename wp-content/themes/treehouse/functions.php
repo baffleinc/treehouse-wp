@@ -68,6 +68,8 @@
 
 	 add_image_size( 'hero-image', 1440 );
 
+	add_image_size( 'gallery-thumb', 600 );
+
 
 	 /**
 	 * Create a taxonomy

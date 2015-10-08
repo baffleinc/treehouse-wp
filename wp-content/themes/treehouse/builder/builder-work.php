@@ -75,10 +75,12 @@
 				foreach($projects as $project) : 
 					$images = get_fields($project->ID);
 					if(!empty($images['images'])) : 
+						$n = 0;
 						foreach($images['images'] as $i) :
+							if($n >= 1) :
 			?>
 				<a class="fancybox gallery hide" rel="fancy-<?php echo $project->ID ?>" href="<?php echo $i['gallery_image']['sizes']['hero-image'] ?>"title="<?php the_field('description', $project->ID) ?>">fancybox image</a>
-			<?php  endforeach; endif; endforeach; ?>
+			<?php endif; $n++; endforeach; endif; endforeach; ?>
 		</div>
 	</div>
 </section>

@@ -25,7 +25,7 @@ get_header();
 		</div>
 		<div class="row flex-center">
 			<div class="small-12 medium-6 medium-push-6 columns serif">
-				<p>We make a whole bunch of shit, talk to us we’ll tell youwhat you want to hear but won’t deliver. eata dick. All I want is your money</p>
+				
 
 				<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 					<?php the_content() ?>
