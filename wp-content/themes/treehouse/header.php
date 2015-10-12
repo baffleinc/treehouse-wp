@@ -27,15 +27,14 @@
 	<?php wp_head(); ?>
 
 	<script>
-		$(function(){
-			NProgress.start();
-		});
+
+		NProgress.start();
 
 		var progress = 10;
 
 		setTimeout(function(){
 			NProgress.set(progress);
-			progress = progress + 5;
+			progress = progress + 7;
 		}, 1000);
 
 		$(window).on('load', function(){
