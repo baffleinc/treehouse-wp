@@ -3095,7 +3095,7 @@ p, button, .button {
 *
 **/
 .headroom {
-  transition: transform 350ms cubic-bezier(0.19, 1, 0.22, 1); }
+  transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1); }
 
 .headroom--pinned {
   transform: translateY(0); }
@@ -3174,6 +3174,9 @@ footer {
   height: 3.25rem;
   color: #FFFFFF;
   font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
+  @media only screen and (max-width: 40em) {
+    footer {
+      height: auto !important; } }
   footer ul.social {
     margin-top: 0.5625rem;
     margin-bottom: 0; }
@@ -3239,6 +3242,30 @@ p {
 
 .headroom--unpinned {
   transform: translateY(-100%); }
+
+@media only screen and (max-width: 40em) {
+  header h1 {
+    margin-bottom: 0;
+    margin-top: 0.5rem; }
+  header ul.inline-list {
+    float: none !important;
+    background-color: #eee;
+    height: 100vh;
+    margin-top: 3.25rem;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 4rem; }
+    header ul.inline-list li {
+      display: block;
+      float: none; }
+    header ul.inline-list li a {
+      font-size: 2rem;
+      display: inline-block;
+      padding: 0 0 1rem; }
+    header ul.inline-list.visible {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible; } }
 
 section.hero {
   height: 100vh;
@@ -3419,6 +3446,9 @@ section.columns-3 {
     section.columns-3 .columns.show {
       opacity: 1;
       top: 0; }
+    @media only screen and (max-width: 40em) {
+      section.columns-3 .columns {
+        opacity: 1; } }
   section.columns-3 p {
     font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif;
     font-size: 0.9375rem;
@@ -3452,6 +3482,17 @@ section.insta {
 
 .angular-google-map-container {
   height: 25rem; }
+
+@media only screen and (max-width: 40em) {
+  section#work .thumbs .iso-item .cell {
+    padding: 0; }
+    section#work .thumbs .iso-item .cell img {
+      width: 100%; }
+  ul.categories button {
+    margin-bottom: 0; }
+  .og-grid li {
+    padding: 1em !important;
+    padding-bottom: 0 !important; } }
 
 .og-grid {
   list-style: none;
@@ -3597,6 +3638,8 @@ body.page-template-tmpl-about {
 @media only screen and (max-width: 40em) {
   .about-container, .contact-container {
     padding: 4rem 1.5rem 0; }
+  .about-container p, .about-container li {
+    font-size: 2rem; }
   h2.page-title {
     color: #FFFFFF;
     font-size: 3rem; }

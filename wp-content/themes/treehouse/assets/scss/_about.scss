@@ -135,6 +135,12 @@ body.page-template-tmpl-about{
 		padding: 4rem 1.5rem 0;
 	}
 
+	.about-container{
+		p, li{
+				font-size: 2rem;
+			}
+	}
+
 	h2.page-title{
 		color: $white;
 		font-size: 3rem;
