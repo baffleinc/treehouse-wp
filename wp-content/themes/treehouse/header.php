@@ -27,8 +27,20 @@
 	<?php wp_head(); ?>
 
 	<script>
+		$(function(){
+			NProgress.start();
+		});
+
+		var progress = 10;
+
+		setTimeout(function(){
+			NProgress.set(progress);
+			progress = progress + 5;
+		}, 1000);
+
 		$(window).on('load', function(){
 			$('#loading').fadeOut();
+			NProgress.done();
 		});
 	</script>
 
