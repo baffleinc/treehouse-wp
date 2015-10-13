@@ -28,19 +28,15 @@
 
 	<script>
 		$(function(){
-			NProgress.start();
+			
 		});
 
-		var progress = 10;
-
-		setTimeout(function(){
-			NProgress.set(progress);
-			progress = progress + 7;
-		}, 1000);
+		
 
 		$(window).on('load', function(){
+			$('#progress').removeClass('animate-loading');
 			$('#loading').fadeOut();
-			NProgress.done();
+
 		});
 	</script>
 
@@ -59,6 +55,10 @@
 	<div id="loading">
 		<img src="<?php echo get_template_directory_uri() ?>/assets/images/loading.gif" alt="">
 		<p><strong>Loading</strong></p>
+		<span class="progress-wrapper">
+			<span id="progress" class="animate-loading"></span>
+		</span>
+		
 	</div>
 	<header class="header" ng-init="showMenu = false;">
 		<!-- <div class="row">
@@ -66,9 +66,14 @@
 				<h1 class="left"><a href="<?php echo home_url() ?>" title="<?php bloginfo('name'); ?>" class="logo"><img src="<?php echo get_template_directory_uri() ?>/assets/images/header-logo.svg" alt=""></a></h1>
 				<a ng-click="showMenu = !showMenu" ng-class="{ rotate : showMenu }" class="right toggle-menu"><i class="fa fa-bars"></i></a>
 				<ul class="inline-list right" ng-class="{ visible : showMenu }">
-					<li><a href="<?php echo home_url('/#work') ?>">Work</a></li>
-					<li><a ng-click="showAbout(false)">About</a></li>
-					<li><a ng-click="showAbout(true)">Contact</a></li>
+
+					<li><a du-smooth-scroll ng-click="showMenu = false" href="#hero">Top</a></li>
+					<li><a du-smooth-scroll ng-click="showMenu = false" href="#work">Work</a></li>
+					<li><a du-smooth-scroll ng-click="showMenu = false" href="#about">About</a></li>
+					<li><a du-smooth-scroll ng-click="showMenu = false" href="#process">Process</a></li>
+					<li><a du-smooth-scroll ng-click="showMenu = false" href="#clients">Clients</a></li>
+					<li><a du-smooth-scroll ng-click="showMenu = false" href="#contact">Contact</a></li>
+					
 				</ul>
 			<!-- </div>
 		</div> -->

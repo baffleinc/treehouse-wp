@@ -421,6 +421,17 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "561cf5eeff229",
+                    "name": "contact",
+                    "label": "Contact",
+                    "display": "row",
+                    "sub_fields": [
+
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ]
         }
@@ -440,5 +451,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1443922845
+    "modified": 1444738550
 }

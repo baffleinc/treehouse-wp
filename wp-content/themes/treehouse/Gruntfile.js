@@ -100,6 +100,10 @@ module.exports = function(grunt) {
 				files: '<%= app %>/scss/**/*.scss',
 				tasks: ['sass']
 			},
+			autoprefixer: {
+				files: '<%= app %>/css/app.css',
+				tasks: ['autoprefixer']
+			},
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
@@ -144,6 +148,13 @@ module.exports = function(grunt) {
 			}
 		},
 
+		autoprefixer: {
+			app: {
+				src: '<%= app %>/css/app.css',
+				dest: '<%= app %>/css/app.prefixed.css'
+			}
+		},
+
 		bower_concat: {
 			vendor: {
 				dest: '<%= app %>/js/angular.bower.js',
@@ -167,7 +178,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('bower-install', ['wiredep']);
 	grunt.registerTask('build', ['bower_concat']);
 	
-	grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
+	grunt.registerTask('default', ['compile-sass', 'autoprefixer', 'bower-install', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
 	

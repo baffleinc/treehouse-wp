@@ -46,9 +46,6 @@
 
 		#gform_submit_button_1{
 			color: $white;
-			width: rem-calc(461);
-			margin-left: 0.9375rem;
-
 		}
 	}
 
@@ -162,7 +159,6 @@ body.page-template-tmpl-about{
 	}
 
 	#gform_submit_button_1{
-		margin-left: 1rem;
-		width: 310px;
+		width: 100%;
 	}
 }

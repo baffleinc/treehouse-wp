@@ -242,9 +242,67 @@ section.clients{
 	}
 }
 
+section.contact{
+	padding: 4rem 0 0;
+
+	form label,
+	form input[type="text"]{
+		font-family: $font-family-serif;
+	}
+
+	form input[type="text"],
+	form textarea{
+		margin: 0;
+		width: 100%!important;
+		margin-bottom: 1rem;
+	}
+
+	h1{
+		color: $jumbo;
+	}
+
+	form label{
+		text-transform: uppercase;
+	}
+
+	#gform_fields_1,
+	.gform_footer{
+		@include grid-row();
+	}
+
+	.gform_footer{
+		@include grid-column(12);
+	}
+
+	#field_1_1,
+	#field_1_2,
+	#field_1_3{
+		@include grid-column(12);
+		clear: none;
+	}
+
+	@media #{$medium-up}{
+		#field_1_1,
+		#field_1_2{
+			@include grid-column(6);
+		}
+	}
+		
+}
+
 section.insta{
+
+	h1{
+		background-color: rgba(255,255,255,0.8);
+		position: relative;
+		z-index: 999;
+		width: rem-calc(200);
+		text-align: center;
+		margin: 0 auto rem-calc(-60);
+		color: $jumbo;
+	}
 	
-	padding: 4rem 0;
+	padding: 4rem 0 0;
 
 	.sbi_follow_btn,
 	.sb_instagram_header{ display: none!important; }

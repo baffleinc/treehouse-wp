@@ -13,6 +13,7 @@ if( have_rows('sections') ) {
 	    case 'maps' : get_template_part('builder/builder', 'maps'); break;
 	    case 'text_over_image' : get_template_part('builder/builder', 'text-over-image'); break;
 	    case 'work' : get_template_part('builder/builder', 'work'); break;
+	    case 'contact' : get_template_part('builder/builder', 'contact'); break;
 	  }
 
   }

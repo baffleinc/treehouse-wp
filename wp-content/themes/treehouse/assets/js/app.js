@@ -6,7 +6,7 @@
 // supplied his own design, so I ported over bits and pieces
 // to save time. Shame, the other one was fully hectic!
 
-angular.module('thApp', ['uiGmapgoogle-maps'])
+angular.module('thApp', ['uiGmapgoogle-maps', 'duScroll'])
 	.controller('MainController', function ($scope, $location){
 
 		$scope.coords = {

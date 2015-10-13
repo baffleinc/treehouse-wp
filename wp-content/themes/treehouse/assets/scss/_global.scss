@@ -21,6 +21,37 @@ button,
 	.fancybox-nav{ opacity: 0.5 }
 }
 
+.progress-wrapper{
+	width: 80%;
+	max-width: rem-calc(500);
+	margin: 0 auto;
+}
+
+#progress{
+	display: block;
+	height: 1rem;
+	background-color: $primary-color;
+	border-radius: 1rem;
+	width: 100%;
+
+	transition: width 500ms linear;
+
+	&.animate-loading{
+		animation: progress 20s linear;
+	}
+	
+}
+
+@keyframes progress{
+	0%{
+		width: 0;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
 
 #loading{
 	position: fixed;
@@ -29,7 +60,7 @@ button,
 	right: 0;
 	bottom: 0;
 
-	z-index: 999;
+	z-index: 9999;
 
 	background-color: #cde9fe;
 	text-align: center;
@@ -92,7 +123,7 @@ header{
 	position: fixed;
 	top: 0;
 	left: 0; right: 0;
-	z-index: 99;
+	z-index: 9998;
 
 	height: rem-calc($header-height);
 	background-color: $white;
@@ -260,6 +291,11 @@ p{ font-weight: 400; }
     transform: translateY(-100%);
 }
 
+#sb_instagram #sbi_images .sbi_item,
+#sbi_images{
+	padding: 0!important;
+}
+
 
 @media #{$small-only}{
 
@@ -284,7 +320,7 @@ p{ font-weight: 400; }
 		}
 
 		li a{
-			font-size: 2rem;
+			font-size: rem-calc(30);
 			display: inline-block;
 			padding: 0 0 1rem;
 		}
