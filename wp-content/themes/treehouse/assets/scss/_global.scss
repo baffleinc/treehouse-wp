@@ -31,6 +31,7 @@ button,
 	height: 0.5rem;
 	background-color: $white;
 	width: 100%;
+	margin-top: -5rem;
 
 	transition: width 500ms linear;
 
@@ -71,6 +72,7 @@ button,
 	img{ margin-top: -4rem; }
 
 	p{
+		margin-top: -4rem;
 		color: $white;
 		letter-spacing: 10px;
 	}

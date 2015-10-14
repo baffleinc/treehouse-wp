@@ -3078,6 +3078,7 @@ p, button, .button {
   height: 0.5rem;
   background-color: #FFFFFF;
   width: 100%;
+  margin-top: -5rem;
   transition: width 500ms linear; }
   #progress.animate-loading {
     animation: progress 20s linear; }
@@ -3105,6 +3106,7 @@ p, button, .button {
   #loading img {
     margin-top: -4rem; }
   #loading p {
+    margin-top: -4rem;
     color: #FFFFFF;
     letter-spacing: 10px; }
 
