@@ -3548,12 +3548,14 @@ section.clients .client-list {
 
 section.contact {
   padding: 4rem 0 0; }
-  section.contact form label, section.contact form input[type="text"] {
+  section.contact form label, section.contact form input[type="text"], section.contact form textarea {
     font-family: 'Quicksand', Cambria, "Times New Roman", Times, serif; }
   section.contact form input[type="text"], section.contact form textarea {
     margin: 0;
     width: 100% !important;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem; }
   section.contact h1 {
     color: #939698; }
   section.contact form label {

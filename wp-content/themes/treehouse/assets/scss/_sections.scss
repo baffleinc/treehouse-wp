@@ -246,7 +246,8 @@ section.contact{
 	padding: 4rem 0 0;
 
 	form label,
-	form input[type="text"]{
+	form input[type="text"],
+	form textarea{
 		font-family: $font-family-serif;
 	}
 
@@ -255,6 +256,8 @@ section.contact{
 		margin: 0;
 		width: 100%!important;
 		margin-bottom: 1rem;
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
 	}
 
 	h1{
