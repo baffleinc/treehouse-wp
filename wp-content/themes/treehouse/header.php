@@ -54,10 +54,10 @@
 <body <?php body_class(); ?> ng-controller="MainController">
 	<div id="loading">
 		<img src="<?php echo get_template_directory_uri() ?>/assets/images/loading.gif" alt="">
-		<p><strong>Loading</strong></p>
 		<span class="progress-wrapper">
 			<span id="progress" class="animate-loading"></span>
 		</span>
+		<p><strong>Loading</strong></p>
 		
 	</div>
 	<header class="header" ng-init="showMenu = false;">
@@ -67,11 +67,8 @@
 				<a ng-click="showMenu = !showMenu" ng-class="{ rotate : showMenu }" class="right toggle-menu"><i class="fa fa-bars"></i></a>
 				<ul class="inline-list right" ng-class="{ visible : showMenu }">
 
-					<li><a du-smooth-scroll ng-click="showMenu = false" href="#hero">Top</a></li>
 					<li><a du-smooth-scroll ng-click="showMenu = false" href="#work">Work</a></li>
 					<li><a du-smooth-scroll ng-click="showMenu = false" href="#about">About</a></li>
-					<li><a du-smooth-scroll ng-click="showMenu = false" href="#process">Process</a></li>
-					<li><a du-smooth-scroll ng-click="showMenu = false" href="#clients">Clients</a></li>
 					<li><a du-smooth-scroll ng-click="showMenu = false" href="#contact">Contact</a></li>
 					
 				</ul>
